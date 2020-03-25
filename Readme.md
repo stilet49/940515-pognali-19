@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Нестеров](https://up.htmlacademy.ru/adaptive/19/user/940515).
-* Наставник: [Михаил Колотович](https://htmlacademy.ru/profile/id225353)
+* Наставник: [Оксана Вайнруб](https://htmlacademy.ru/profile/id166797)
 
 ---
 
