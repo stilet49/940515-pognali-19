@@ -6,29 +6,21 @@
   </head>
   <body>
 
-    <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="логотим сервиса Погнали">
-      </a>
-
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper"></div>
-        <!-- Здесь будет менюшка -->
-          <ul class="main-nav__list site-list">
-
-          </ul>
-          <ul class="main-nav__list user-list">
-
-          </ul>
+    <header class="header">
+      <nav class="header__menu menu">
+        <div class="menu__inner inner">
+          <a class="menu__logo logo">
+            <img class="logo__image" src="img/logo-mobile.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </a>
+          <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">Открыть меню</button>
         </div>
+        <!--здесь будет выпадающее меню-->
       </nav>
-      <h2 class="page-header__caption">В путешествие с крутыми попутчиками!</h2>
-
     </header>
 
     <main class="page-main">
       <h1 class="visually-hidden">«Погнали» – сервис для поиска попутчиков для путешествий</h1>
+      <!--Секция с вводной информацией-->
       <section class="page-main__intro intro">
         <div class="intro__inner inner">
           <h2 class="visually-hidden">Ввводная информация</h2>
@@ -40,7 +32,7 @@
             </div>
             <a class="intro__login-button button-one" href=#>Авторизация</a>
           </div>
-
+          <!--Комментарий-->
           <blockquote class="intro__review review">
             <p class="review__text index-text">«Лучшее приложение, что я видел в жизни!»</p>
             <cite class="review__author index-text index-text--bold">
@@ -49,7 +41,7 @@
               главный редактор газеты «гаджетлайф»
             </cite>
           </blockquote>
-
+          <!--список чего-то-->
           <ul class="intro__promo-list">
             <li class="intro__promo-item">
               Выберите направление
@@ -66,7 +58,7 @@
           </ul>
         </div>
       </section>
-
+       <!--Секция с информацией о сервисе-->
       <section class="page-main__about about">
         <div class="about__inner inner">
           <h2 class="about__title index-title">О сервисе</h2>
@@ -80,6 +72,7 @@
             — скорее зовите в совместный трип!</p>
         </div>
       </section>
+       <!--Секция с информацией о направлениях-->
       <section class="page-main__countries countries">
         <div class="countries__inner inner">
           <h2 class="countries__title index-title">Направления</h2>
@@ -111,7 +104,7 @@
           <a class="countries__button button-two" href="form.html">Показать все</a>
         </div>
       </section>
-
+       <!--Секция с информацией о попутчиках-->
       <section class="page-main__travelmates travelmates">
         <div class="travelmates__inner inner">
           <h2 class="travelmates__title index-title">Попутчики</h2>
@@ -126,9 +119,9 @@
                 <img class="travelmates-item__image" src="img/firsova-desktop.jpg" width="270" height="270" alt="Фото девушки в бассейне">
               </div>
               <ul class="travelmates-item__countries-flags country-flags">
-                <li class="country-flags__item country-flags__item--shri-lanka" aria-label="Шри-Ланка"></li>
-                <li class="country-flags__item country-flags__item--thailand" aria-label="Таиланд"></li>
-                <li class="country-flags__item country-flags__item--seychelles" aria-label="Сейшеллы"></li>
+                <li class="country-flags__item country-flags__item--shri-lanka" aria-label="Шри-Ланка">Шри-Ланка</li>
+                <li class="country-flags__item country-flags__item--thailand" aria-label="Таиланд">Таиланд</li>
+                <li class="country-flags__item country-flags__item--seychelles" aria-label="Сейшеллы">Сейшеллы</li>
               </ul>
               <ul class="travelmates-item__tags-list tags-list">
                 <li class="tags-list__item">#ЗОЖ</li>
@@ -139,10 +132,10 @@
                 <li class="tags-list__item">#смузи</li>
               </ul>
               <ul class="travelmates-item__transport-list transport">
-                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Авиаперелет"></li>
-                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Автотранспорт"></li>
-                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Велосипед"></li>
-                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Пешком"></li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Авиаперелет">Авиаперелет</li>
+                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Автотранспорт">Автотранспорт</li>
+                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Велосипед">Велосипед</li>
+                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Пешком">Пешком</li>
               </ul>
               <p class="travelmates-item__user-level user-level user-level--99">
                 <span class="user-level__number">99</span>
@@ -159,8 +152,8 @@
               </div>
 
               <ul class="travelmates-item__countries-flags country-flags">
-                <li class="country-flags__item country-flags__item--belgium" aria-label="Бельгия>"></li>
-                <li class="country-flags__item country-flags__item--czech" aria-label="Чехия"></li>
+                <li class="country-flags__item country-flags__item--belgium" aria-label="Бельгия">Бельгия</li>
+                <li class="country-flags__item country-flags__item--czech" aria-label="Чехия">Чехия</li>
               </ul>
 
               <ul class="travelmates-item__tags-list tags-list">
@@ -172,10 +165,10 @@
               </ul>
 
               <ul class="travelmates-item__transport-list transport">
-                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Авиаперелет"></li>
-                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Автотранспорт"></li>
-                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Велосипед"></li>
-                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Пешком"></li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Авиаперелет">Авиаперелет</li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Автотранспорт">Автотранспорт</li>
+                <li class="travelmates-item__transport-list-icon transport__icon" aria-label="Велосипед">Велосипед</li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active" aria-label="Пешком">Пешком"</li>
               </ul>
 
               <p class="travelmates-item__user-level user-level user-level--80">
@@ -187,6 +180,7 @@
           <a class="travelmates__button button-two" href="catalog.html">Показать всех</a>
         </div>
       </section>
+       <!--Секция с информацией о тарифах на профиль-->
       <div class="main__rates-wrapper">
         <section class="main__rates rates">
           <div class="rates__inner inner">
@@ -211,7 +205,7 @@
         </section>
       </div>
     </main>
-
+     <!--Подвал-->
     <footer class="footer">
       <div class="footer__inner inner">
         <a class="footer__logo logo">
@@ -235,7 +229,7 @@
         </ul>
         <div class="footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></a>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"><!-- здесь будет логотип Академии--></a>
         </div>
       </div>
     </footer>
