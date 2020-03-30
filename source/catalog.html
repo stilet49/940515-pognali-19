@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Погнали</title>
+  </head>
+  <body>
+
+    <header class="header">
+      <nav class="header__menu menu">
+        <div class="menu__inner inner">
+          <a class="menu__logo logo">
+            <img class="logo__image" src="img/logo-mobile.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </a>
+          <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">Открыть меню</button>
+          <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню">Закрыть меню</button>
+
+          <!-- Меню, которе появляется при клике на гамбургер -->
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#" data-hover="О сервисе">О сервисе</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html" data-hover="Направления">Направления</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html" data-hover="Попутчики">Попутчики</a>
+            </li>
+          </ul>
+
+          <a class="menu__login-button button-one" href="#">Авторизация</a>
+
+          <div class="menu__contacts contacts">
+            <a class="menu__contacts-button menu__contacts-button--tel contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628" aria-label="Контактный номер">8 800 555-86-28</a>
+            <a class="menu__contacts-button menu__contacts-button--email contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта">mail@htmlacademy.ru</a>
+          </div>
+
+          <ul class="menu__socials socials">
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook socials__link--facebook--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» в Фейсбук">
+                Фейсбук
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vkontakte socials__link--vkontakte--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» во Вконтакте">
+                ВКонтакте
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram socials__link--instagram--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» в Инстаграм">
+                Инстаграм
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </nav>
+    </header>
+
+    <main class="catalog-main">
+      <div class="catalog-main__title-wrapper">
+        <div class="catalog-main__title-inner inner">
+          <h1 class="catalog-main__title page-main-heading">Попутчики</h1>
+        </div>
+      </div>
+      <!--Здесь будет фильтр (который фильтрация по странам)-->
+      <div class="catalog-main__inner inner">
+        <!--здесь будет фильтр попутчика-->
+        <section class="catalog-main_travelmates-filtered travelmates-filtered">
+          <h2 class="visually-hidden">Карточки с информацией о попутчиках</h2>
+          <ul class="travelmates-filtered__list">
+            <li class="travelmates-filtered__item travelmates-item">
+              <h3 class="travelmates-item__title travelmates-item__title--busy">
+                <a class="travelmates-item__profile-link" href="firsova-profile.html">Таня Фирсова</a>
+              </h3>
+              <div class="travelmates-item__image-wrapper">
+                <a href="firsova-profile.html">
+                  <img class="travelmates-item__image" src="img/firsova-mobile.jpg" width="70" height="70" alt="Фото девушки в бассейне">
+                </a>
+              </div>
+
+              <p class="travelmates-item__likes travelmates-item__likes--active">1,5 М</p>
+
+              <ul class="travelmates-item__tags-list tags-list">
+                <li class="tags-list__item">#ЗОЖ</li>
+                <li class="tags-list__item">#ПП</li>
+                <li class="tags-list__item">#Фитнес</li>
+                <li class="tags-list__item">#пляж</li>
+                <li class="tags-list__item">#авокадо</li>
+                <li class="tags-list__item">#смузи</li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
+
+              <ul class="travelmates-item__countries-flags country-flags">
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--shri-lanka">Шри-Ланка</li>
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--thailand">Тайланд</li>
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--seychelles">Сейшелы</li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--transport">Транспорт:</p>
+
+              <ul class="travelmates-item__transport-list transport">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">Авиаперелет</li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Автотранспорт">Автотранспорт</li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Велосипед">Велосипед</li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Пешком">Пешком</li>
+              </ul>
+              <p class="travelmates-item__text travelmates-item__text--level">Левел:</p>
+              <p class="travelmates-item__user-level user-level user-level--catalog user-level--99">
+                <span class="user-level__number user-level__number--catalog">99</span>
+                <span class="user-level__text user-level__text--catalog">level</span>
+              </p>
+              <a class="travelmates-item__button button-one" href="#">Позвать!</a>
+            </li>
+
+            <li class="travelmates-filtered__item travelmates-item travelmates-item--filtered">
+              <h3 class="travelmates-item__title travelmates-item__title--busy">
+                <a class="travelmates-item__profile-link" href="demin-profile.html">Петя Демин</a>
+              </h3>
+
+              <div class="travelmates-item__image-wrapper">
+                <a href="demin-profile.html">
+                  <img class="travelmates-item__image" src="img/demin-mobile.jpg" width="70" height="70" alt="Фото мужчины с бородой в шапке и темных очках">
+                </a>
+              </div>
+
+              <p class="travelmates-item__likes">150</p>
+
+              <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
+              <ul class="travelmates-item__countries-flags country-flags">
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--belgium">Бельгия</li>
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--czech">Чехия</li>
+              </ul>
+
+              <ul class="travelmates-item__tags-list tags-list">
+                <li class="tags-list__item">#бургер</li>
+                <li class="tags-list__item">#бар</li>
+                <li class="tags-list__item">#футбол</li>
+                <li class="tags-list__item">#концерт</li>
+                <li class="tags-list__item">#крафт</li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--transport">Транспорт:</p>
+              <ul class="travelmates-item__transport-list transport">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
+                  Авиаперелет
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Автотранспорт">
+                  Автотранспорт
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Велосипед">
+                  Велосипед
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Пешком">
+                  Пешком
+                </li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--level">Левел:</p>
+              <p class="travelmates-item__user-level user-level user-level--catalog user-level--80">
+                <span class="user-level__number user-level__number--catalog">80</span>
+                <span class="user-level__text user-level__text--catalog">level</span>
+              </p>
+
+              <a class="travelmates-item__button button-one" href="#">Позвать!</a>
+            </li>
+
+            <li class="travelmates-filtered__item travelmates-item travelmates-item--filtered">
+              <h3 class="travelmates-item__title travelmates-item__title--busy">
+                <a class="travelmates-item__profile-link" href="smolov-profile.html">Марк Смолов</a>
+              </h3>
+
+              <div class="travelmates-item__image-wrapper">
+                <a href="smolov-profile.html">
+                  <img class="travelmates-item__image" src="img/smolov-mobile.jpg" width="70" height="70" alt="Фото мужчины в белой майке и шортах">
+                </a>
+              </div>
+
+              <p class="travelmates-item__likes">1700</p>
+
+              <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
+              <ul class="travelmates-item__countries-flags country-flags">
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--usa">США</li>
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--australia">Австралия</li>
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--dominican">Доминикана</li>
+              </ul>
+
+              <ul class="travelmates-item__tags-list tags-list">
+                <li class="tags-list__item">#рэп</li>
+                <li class="tags-list__item">#тату</li>
+                <li class="tags-list__item">#хайпбист</li>
+                <li class="tags-list__item">#кроссовки</li>
+                <li class="tags-list__item">#суприм</li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--transport">Транспорт:</p>
+              <ul class="travelmates-item__transport-list transport">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
+                  Авиаперелет
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Автотранспорт">
+                  Автотранспорт
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Велосипед">
+                  Велосипед
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Пешком">
+                  Пешком
+                </li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--level">Левел:</p>
+              <p class="travelmates-item__user-level user-level user-level--catalog user-level--25">
+                <span class="user-level__number user-level__number--catalog">25</span>
+                <span class="user-level__text user-level__text--catalog">level</span>
+              </p>
+
+              <a class="travelmates-item__button button-one" href="#">Позвать!</a>
+            </li>
+
+            <li class="travelmates-filtered__item travelmates-item travelmates-item--filtered">
+              <h3 class="travelmates-item__title travelmates-item__title--ready">
+                <a class="travelmates-item__profile-link" href="rogovaya-profile.html">Лариса Роговая</a>
+              </h3>
+
+              <div class="travelmates-item__image-wrapper">
+                <a href="rogovaya-profile.html">
+                  <img class="travelmates-item__image" src="img/rogovaya-mobile.jpg" width="70" height="70" alt="Фото девушки в синем деловом костюме">
+                </a>
+              </div>
+
+              <p class="travelmates-item__likes">23</p>
+
+              <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
+              <ul class="travelmates-item__countries-flags country-flags">
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--uk">Великобритания</li>
+                <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--germany">Германия</li>
+              </ul>
+
+              <ul class="travelmates-item__tags-list tags-list">
+                <li class="tags-list__item">#образование</li>
+                <li class="tags-list__item">#карьера</li>
+                <li class="tags-list__item">#учеба</li>
+                <li class="tags-list__item">#линкедин</li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--transport">Транспорт:</p>
+              <ul class="travelmates-item__transport-list transport">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
+                  Авиаперелет
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active transport__icon--bgc" aria-label="Автотранспорт">
+                  Автотранспорт
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Велосипед">
+                  Велосипед
+                </li>
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--bgc" aria-label="Пешком">
+                  Пешком
+                </li>
+              </ul>
+
+              <p class="travelmates-item__text travelmates-item__text--level">Левел:</p>
+              <p class="travelmates-item__user-level user-level user-level--catalog user-level--50">
+                <span class="user-level__number user-level__number--catalog">50</span>
+                <span class="user-level__text user-level__text--catalog">level</span>
+              </p>
+
+              <a class="travelmates-item__button button-one" href="#">Позвать!</a>
+            </li>
+          </ul>
+          <a class="travelmates-filtered__button button-one button-one--bgc" href="#">Показать еще</a>
+          <ul class="travelmates-filtered__pagination pagination">
+            <li class="pagination__button pagination__button--back">
+              <a class="pagination__link" href="#" aria-label="Назад">Назад</a>
+            </li>
+            <li class="pagination__button pagination__button--forward">
+              <a class="pagination__link" href="#" aria-label="Вперед">Вперёд</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner inner">
+        <a class="footer__logo logo" href="index.html">
+          <img class="logo__image" src="img/logo-mobile-blue.png"  width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+        </a>
+        <ul class="footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link" href="#" aria-label="Сервис «Погнали» в Фейсбук">
+              Фейсбук
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#" aria-label="Сервис «Погнали» во Вконтакте">
+              ВКонтакте
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#" aria-label="Сервис «Погнали» в Инстаграм">
+              Инстаграм
+            </a>
+          </li>
+        </ul>
+        <div class="footer__copyright copyright">
+          <p class="copyright__text">Разработано</p>
+          <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"><!-- здесь будет логотип Академии--></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
