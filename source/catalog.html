@@ -64,9 +64,136 @@
           <h1 class="catalog-main__title page-main-heading">Попутчики</h1>
         </div>
       </div>
-      <!--Здесь будет фильтр (который фильтрация по странам)-->
+      <section class="filter-country">
+        <div class="filter-country__inner inner">
+          <h2 class="filter-country__title">Фильтрация по странам</h2>
+
+          <button class="filter-country__button filter-country__button--hide filter-country__button--expanded" aria-label="Кнопка открытия/закрытия блока с фильтром по странам">
+            Кнопка открытия/закрытия блока с фильтром по странам
+          </button>
+        </div>
+      </section>
+
       <div class="catalog-main__inner inner">
-        <!--здесь будет фильтр попутчика-->
+
+        <section class="catalog-main__find-travelmate find-travelmate">
+          <h2 class="find-travelmate__title">Подберите идеального попутчика</h2>
+
+          <form class="find-travelmate__form travelmate-form" action="https://echo.htmlacademy.ru" method="POST">
+
+            <div class="travelmate-form__fieldset">
+              <div class="travelmate-form__legend">Хобби</div>
+
+              <div class="travelmate-form__label-wrapper travelmate-form__label-wrapper--hobby">
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="hobby" value="sport" id="sport">
+                <label class="travelmate-form__label" for="sport">Спортзал</label>
+
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="hobby" value="hookah" id="hookah">
+                <label class="travelmate-form__label" for="hookah">Кальян</label>
+
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="hobby" value="sofa" id="sofa">
+                <label class="travelmate-form__label" for="sofa">Диван</label>
+              </div>
+
+              <button class="travelmate-form__close-button travelmate-form__close-button--hobby" type="button" aria-label="Кнопка открыть / закрыть блок «Хобби»">
+                "Кнопка открыть / закрыть блок «Хобби»"
+              </button>
+            </div>
+
+            <div class="travelmate-form__fieldset">
+              <div class="travelmate-form__legend">Музыка</div>
+
+              <div class="travelmate-form__label-wrapper travelmate-form__label-wrapper--music">
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="music" value="rock" id="rock" checked>
+                <label class="travelmate-form__label" for="rock">Тяжелый рок</label>
+
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="music" value="rap" id="rap">
+                <label class="travelmate-form__label" for="rap">Русский рэп</label>
+
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="music" value="eurodance" id="eurodance">
+                <label class="travelmate-form__label" for="eurodance">Евродэнс</label>
+              </div>
+
+              <button class="travelmate-form__close-button travelmate-form__close-button--music" type="button" aria-label="Кнопка открыть / закрыть блок «Музыка»">
+                "Кнопка открыть / закрыть блок «Музыка»"
+              </button>
+            </div>
+
+            <div class="travelmate-form__fieldset">
+              <div class="travelmate-form__legend">Еда</div>
+
+              <div class="travelmate-form__label-wrapper travelmate-form__label-wrapper--food">
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="food" value="meat" id="meat">
+                <label class="travelmate-form__label" for="meat">Мясоед</label>
+
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="food" value="healthy" id="healthy">
+                <label class="travelmate-form__label" for="healthy">Сидит на ПП</label>
+
+                <input class="travelmate-form__checkbox visually-hidden" type="checkbox" name="food" value="vegan" id="vegan">
+                <label class="travelmate-form__label" for="vegan">Веган-сыроед</label>
+              </div>
+
+              <button class="travelmate-form__close-button travelmate-form__close-button--food" type="button" aria-label="Кнопка открыть / закрыть блок «Еда»">
+                "Кнопка открыть / закрыть блок «Еда»"
+              </button>
+            </div>
+
+            <div class="travelmate-form__fieldset travelmate-form__fieldset--transport">
+              <div class="travelmate-form__legend">Транспорт</div>
+
+              <div class="travelmate-form__label-wrapper travelmate-form__label-wrapper--transport">
+                <div class="travelmate-form__transport transport">
+                  <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="plane" id="plane" checked>
+                  <label class="transport__icon transport__icon--button" for="plane" aria-label="Авиаперелет">
+                    Авиаперелет
+                  </label>
+
+                  <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bus" id="bus" checked>
+                  <label class="transport__icon transport__icon--button" for="bus" aria-label="Автотранспорт">
+                    Автотранспорт
+                  </label>
+
+                  <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="cycle" id="cycle">
+                  <label class="transport__icon transport__icon--button" for="cycle" aria-label="Велосипед">
+                    Велосипед
+                  </label>
+
+                  <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="foot" id="foot" checked>
+                  <label class="transport__icon transport__icon--button" for="foot" aria-label="Пешком">
+                    Пешком
+                  </label>
+                </div>
+              </div>
+
+              <button class="travelmate-form__close-button travelmate-form__close-button--transport" type="button" aria-label="Кнопка открыть / закрыть блок «Транспорт»">
+                Кнопка открыть / закрыть блок «Транспорт»
+              </button>
+            </div>
+
+            <div class="travelmate-form__fieldset">
+              <div class="travelmate-form__legend">Левел</div>
+
+              <div class="travelmate-form__label-wrapper travelmate-form__label-wrapper--level">
+                <div class="travelmate-form__label-range">
+                  <label aria-label="Минимальный левел"><input class="travelmate-form__range-value" type="number" value="30"></label>
+                  <label aria-label="Максимальный левел"><input class="travelmate-form__range-value" type="number" value="100"></label>
+                </div>
+                <input class="travelmate-form__range visually-hidden" type="range" name="level-range" id="level">
+                <span class="travelmate-form__custom-range">
+                  <span class="travelmate-form__filter-slider travelmate-form__filter-slider--one"></span>
+                  <span class="travelmate-form__filter-slider travelmate-form__filter-slider--two"></span>
+                </span>
+              </div>
+
+              <button class="travelmate-form__close-button travelmate-form__close-button--level" type="button" aria-label="Кнопка открыть / закрыть блок «Левел»">
+                Кнопка открыть / закрыть блок «Левел»
+              </button>
+            </div>
+
+            <button class="travelmate-form__button button-one">Показать</button>
+          </form>
+        </section>
+
         <section class="catalog-main_travelmates-filtered travelmates-filtered">
           <h2 class="visually-hidden">Карточки с информацией о попутчиках</h2>
           <ul class="travelmates-filtered__list">
