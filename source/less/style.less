@@ -1,0 +1,90 @@
+//@import "normalize";
+@import "variables.less";
+@import "mixins.less";
+
+
+// шрифты
+@font-face {
+  font-family: @main-font;
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+  src: local("Blogger Sans Light"),
+    url("../fonts/bloggersans-light.woff2") format("woff2"),
+    url("../fonts/bloggersans-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: @main-font;
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: local("Blogger Sans"),
+    url("../fonts/bloggersans.woff2") format("woff2"),
+    url("../fonts/bloggersans.woff") format("woff");
+}
+
+@font-face {
+  font-family: @main-font;
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  src: local("Blogger Sans Medium"),
+    url("../fonts/bloggersans-medium.woff2") format("woff2"),
+    url("../fonts/bloggersans-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: @main-font;
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+  src: local("Blogger Sans Bold"),
+    url("../fonts/bloggersans-bold.woff2") format("woff2"),
+    url("../fonts/bloggersans-bold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import "./blocks/visually-hidden.less";
+@import "./blocks/inner.less";
+@import "./blocks/index-text.less";
+@import "./blocks/index-title.less";
+@import "./blocks/button-one.less";
+@import "./blocks/button-two.less";
+@import "./blocks/user-level.less";
+@import "./blocks/contacts.less";
+@import "./blocks/contacts-intro.less";
+@import "./blocks/logo.less";
+@import "./blocks/socials.less";
+@import "./blocks/tags-list.less";
+@import "./blocks/country-flags.less";
+@import "./blocks/review.less";
+@import "./blocks/menu.less";
+@import "./blocks/header.less";
+@import "./blocks/page-main.less";
+@import "./blocks/intro.less";
+@import "./blocks/about.less";
+@import "./blocks/countries.less";
+@import "./blocks/countries-item.less";
+@import "./blocks/travelmates.less";
+@import "./blocks/travelmates-item.less";
+@import "./blocks/rates-list.less";
+@import "./blocks/rates.less";
+@import "./blocks/footer.less";
+@import "./blocks/copyright.less";
+@import "./blocks/transport.less";
+@import "./blocks/tooltip.less";

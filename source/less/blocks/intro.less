@@ -1,0 +1,124 @@
+@padding-top-mobile: 23px;
+@padding-bottom-mobile: 40px;
+
+
+.intro {
+  .font-name;
+  font-weight: 700;
+
+  background-color: @blue-1;
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: auto 405px;
+}
+
+.intro__inner {
+  padding-top: @padding-top-mobile;
+  padding-bottom: @padding-bottom-mobile;
+
+  background-image: url("../img/traveller-illustration-mobile@1x.png");
+  background-position: 78px 149px;
+  background-repeat: no-repeat;
+  background-size: 192px 255px;
+}
+
+.intro__promo-text {
+  width: 250px;
+  margin: 0;
+  margin-bottom: 245px;
+
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__contacts-inner {
+  display: flex;
+}
+
+.intro__contacts {
+  display: flex;
+
+  font-size: 0;
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+}
+
+.intro__login-button {
+  width: 189px;
+  margin-bottom: 27px;
+}
+
+.intro__review {
+  align-self: flex-start;
+  margin-bottom: 30px;
+}
+
+.intro__promo-list {
+  width: @mobile-width - 2 * @mobile-padding;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1;
+  color: @blue-1;
+  list-style: none;
+}
+
+.intro__promo-item {
+  position: relative;
+
+  padding-top: 22px;
+  padding-right: 105px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+
+  &:first-child {
+    background-color: @yellow-3;
+    border-top-right-radius: @radius-1;
+    border-top-left-radius: @radius-1;
+
+    &::after {
+      content: "1";
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: @yellow-4;
+
+    &::after {
+      content: "2";
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: @yellow-2;
+
+    &::after {
+      content: "3";
+    }
+  }
+
+  &:nth-child(4) {
+    background-color: @yellow-1;
+    border-bottom-right-radius: @radius-1;
+    border-bottom-left-radius: @radius-1;
+
+    &::after {
+      content: "4";
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 22px;
+    right: 21px;
+
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,122 @@
+.countries-item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  margin-bottom: 10px;
+  padding-bottom: 24px;
+
+  .font-name;
+
+  background-color: #ffffff;
+  border-radius: @radius-1;
+
+  &:last-of-type {
+    margin-bottom: 29px;
+    background-color: transparent;
+    background-image: linear-gradient(#ffffff 80%, @grey-1);
+  }
+}
+
+.countries-item__title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+  margin-top: 99px;
+  padding-top: 26px;
+  padding-right: 85px;
+  padding-left: 24px;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: @blue-1;
+
+  background-color: #ffffff;
+  border-top-left-radius: @radius-1;
+  border-top-right-radius: @radius-1;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -12px;
+    left: 26px;
+
+    width: 35px;
+    height: 24px;
+
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--thailand::before {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--france::before {
+    background-image: url("../img/flag-france.svg");
+  }
+
+  &--czech::before {
+    background-image: url("../img/flag-czech.svg");
+  }
+}
+
+.countries-item__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 270px;
+  height: 110px;
+
+  border-top-right-radius: @radius-1;
+  border-top-left-radius: @radius-1;
+}
+
+.countries-item__text {
+  margin: 0;
+  margin-left: 25px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: rgba(@grey-5, 0.3);
+
+  opacity: 0.3;
+}
+
+.countries-item__user-amount {
+  position: absolute;
+  z-index: 2;
+  top: 130px;
+  right: 23px;
+
+  margin: 0;
+  margin-left: 25px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: rgba(@grey-5, 0.3);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 2px;
+    left: -16px;
+
+    width: 11px;
+    height: 11px;
+
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+
+    opacity: 0.1;
+  }
+}
