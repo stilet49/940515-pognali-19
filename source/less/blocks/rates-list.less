@@ -1,0 +1,63 @@
+.rates-list {
+  width: 219px;
+
+  color: @grey-5;
+}
+
+.rates-list__inner {
+  position: relative;
+
+  padding-top: 11px;
+  padding-bottom: 10px;
+
+  border-top: 1px solid rgba(#000000, 0.05);
+
+  &:first-of-type::before {
+    content: "1";
+
+    background-color: @yellow-4;
+  }
+
+  &:nth-of-type(2)::before {
+    content: "2";
+
+    background-color: @yellow-2;
+  }
+
+  &:nth-of-type(3)::before {
+    content: "3";
+
+    background-color: @yellow-1;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid rgba(#000000, 0.05);
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    right: -25px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #ffffff;
+
+    border-radius: 50%;
+  }
+
+  &--business::before {
+    display: none;
+  }
+}
+
+.rates-list__item-desc {
+  margin: 0;
+}

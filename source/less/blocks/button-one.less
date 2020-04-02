@@ -1,0 +1,50 @@
+.button-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding-top: 5px;
+  padding-right: 29px;
+  padding-bottom: 5px;
+  padding-left: 29px;
+
+  .font-name;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.76;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @blue-1;
+
+  background-color: @yellow-1;
+  border: none;
+  border-radius: @radius-2;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: @yellow-2;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba(@blue-1, 0.3);
+
+    background-color: @yellow-2;
+  }
+
+  &--bgc {
+    background-color: @grey-7;
+  }
+
+  &--bgc:hover {
+    background-color: @grey-8;
+  }
+
+  &--bgc:focus,
+  &--bgc:active {
+    color: rgba(@blue-1, 0.3);
+
+    background-color: @grey-8;
+  }
+}

@@ -1,0 +1,88 @@
+.contacts {
+  .font-name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.38;
+  text-transform: uppercase;
+  color: @blue-1;
+
+  list-style: none;
+}
+
+.contacts__button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-left: 60px;
+
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+
+  fill: @yellow-1;
+
+  //круглый фон
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: @blue-3;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  &--color-yellow {
+    color: @yellow-1;
+
+    &:hover {
+      color: @yellow-2;
+
+      fill: @yellow-2;
+    }
+
+    &:focus,
+    &:active {
+      color: rgba(@yellow-2, 0.3);
+
+      fill: rgba(@yellow-2, 0.3);
+    }
+  }
+}
+
+.contacts__button-icon {
+  position: absolute;
+
+  &--phone {
+    top: 14px;
+    left: 14px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  &--email {
+    top: 15px;
+    left: 14px;
+
+    width: 18px;
+    height: 13px;
+  }
+
+  &--address {
+    top: 20px;
+    left: 16px;
+
+    width: 14px;
+    height: 22px;
+  }
+}
