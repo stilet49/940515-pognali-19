@@ -1,0 +1,38 @@
+.continent-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.continent-list__item {
+  .font-name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.64;
+  text-transform: uppercase;
+}
+
+.continent-list__link {
+  text-decoration: none;
+  color: rgba(@blue-2, 0.3);
+
+  &--checked {
+    color: @blue-2;
+  }
+
+  &:hover {
+    color: rgba(@blue-2, 0.6);
+  }
+
+  &:focus,
+  &:active {
+    color: @blue-2;
+  }
+}

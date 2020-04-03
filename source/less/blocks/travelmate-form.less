@@ -1,0 +1,297 @@
+.travelmate-form__fieldset {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  .font-name;
+  font-weight: 700;
+
+  border: none;
+}
+
+.travelmate-form__legend {
+  width: 100%;
+  padding-top: 13px;
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
+  color: @blue-4;
+
+  border-top: 1px solid #f3c72b;
+
+  &:hover {
+    color: rgba(@blue-4, 0.6);
+  }
+
+  &:focus,
+  &:active {
+    color: rgba(@blue-4, 0.3);
+  }
+}
+
+.travelmate-form__label {
+  position: relative;
+
+  margin-bottom: 14px;
+  padding-left: 25px;
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  color: @grey-5;
+
+  cursor: pointer;
+
+  &:first-of-type {
+    margin-top: 10px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.travelmate-form__label-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.travelmate-form__checkbox:checked + .travelmate-form__label::before {
+  background-image: url("../img/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+}
+
+.travelmate-form__checkbox:focus + .travelmate-form__label::before {
+  opacity: 0.3;
+}
+
+.travelmate-form__transport {
+  margin-top: 5px;
+  margin-bottom: 19px;
+}
+
+.travelmate-form__label-range {
+  position: relative;
+
+  display: flex;
+  width: 220px;
+  height: 35px;
+  margin-bottom: 24px;
+  padding: 0;
+
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  color: @blue-4;
+
+  background-color: #ffffff;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 103px;
+    top: 12px;
+
+    width: 16px;
+    height: 11px;
+
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 102px;
+    top: 16px;
+
+    width: 16px;
+    height: 1px;
+
+    background-color: @grey-2;
+  }
+}
+
+.travelmate-form__range-value {
+  width: 111px;
+  height: 35px;
+
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  color: @blue-4;
+  text-align: center;
+
+  border: solid 1px @grey-2;
+
+  appearance: textfield;
+  //-moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    appearance: none;
+  }
+
+  &:first-child {
+    border-right: none;
+  }
+
+  &:hover {
+    border-color: @grey-10;
+  }
+
+  &:hover:first-child + &:last-child {
+    border-left-color: @grey-10;
+  }
+
+  &:focus,
+  &:active {
+    border-color: @blue-1;
+
+    outline: none;
+  }
+
+  &:focus:first-child + &:last-child,
+  &:active:first-child + &:last-child {
+    border-left-color: @blue-1;
+  }
+}
+
+.travelmate-form__custom-range {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: 2px;
+  margin-bottom: 26px;
+
+  background-image: linear-gradient(to right, rgba(@blue-4, 0.2) 76px, @blue-4 76px);
+}
+
+.travelmate-form__filter-slider {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: @blue-4;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  &--one {
+    top: -4px;
+    left: 71px;
+  }
+
+  &--two {
+    top: -4px;
+    left: 210px;
+  }
+
+  &:hover {
+    top: -9px;
+
+    width: 19px;
+    height: 19px;
+  }
+
+  &:focus,
+  &:active {
+    top: -9px;
+
+    width: 19px;
+    height: 19px;
+
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
+}
+
+.travelmate-form__close-button {
+  position: absolute;
+  top: 11px;
+  right: 0;
+
+  width: 8px;
+  height: 4px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  fill: @blue-2;
+
+  cursor: pointer;
+
+  &--close {
+    .travelmate-form__close-button-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+
+    opacity: 0.3;
+  }
+}
+
+.travelmate-form__button {
+  width: 230px;
+  margin-left: -5px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+
+  background-color: #ffffff;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba(@blue-4, 0.3);
+
+    background-color: @yellow-7;
+  }
+}
