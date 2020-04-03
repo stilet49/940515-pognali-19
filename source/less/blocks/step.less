@@ -1,0 +1,589 @@
+@step-mobile-width: 220px;
+@step-tablet-width: 531px;
+
+.step {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  width: 270px;
+  margin-bottom: 10px;
+  padding-top: 24px;
+  //padding-right: 29px;
+  padding-bottom: 16px;
+  //padding-left: 24px;
+
+  .font-name;
+  font-weight: 700;
+  line-height: 1;
+  color: @blue-4;
+
+  background-color: #ffffff;
+  border-radius: @radius-1;
+
+  &--hide {
+    display: none;
+  }
+
+  &--two,
+  &--three {
+    padding-bottom: 0;
+  }
+}
+
+.step__title {
+  width: @step-mobile-width;
+  margin: 0;
+  margin-bottom: 14px;
+
+  font-size: 20px;
+}
+
+.step__title-new-line {
+  display: block;
+}
+
+.step__controls-list {
+  display: none;
+}
+
+.step__text {
+  width: @step-mobile-width;
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: @grey-5;
+
+  &--break {
+    display: none;
+  }
+}
+
+.step__checkbox-wrapper {
+  position: relative;
+
+  width: @step-mobile-width;
+  margin-bottom: 16px;
+
+  &:focus-within .step__checkbox-label::before {
+    background-color: @grey-11;
+    border: none;
+  }
+}
+
+.step__control-field {
+  width: @step-mobile-width;
+}
+
+.step__checkbox-label {
+  position: relative;
+
+  padding-left: 39px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  fill: @blue-2;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -6px;
+    left: 0;
+
+    width: 26px;
+    height: 26px;
+
+    border: 1px solid @grey-2;
+    border-radius: 4px;
+  }
+
+  &:hover::before {
+    border-color: @grey-10;
+
+    cursor: pointer;
+  }
+
+  &:active::before {
+    background-color: @grey-11;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  &:focus .step__checkbox-icon,
+  &:active .step__checkbox-icon {
+    opacity: 0.3;
+  }
+}
+
+.step__checkbox-icon {
+  display: none;
+
+  position: absolute;
+  top: 2px;
+  left: 9px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.step__checkbox:checked + .step__checkbox-label .step__checkbox-icon {
+  display: inline;
+}
+
+.step__button {
+  margin-bottom: 6px;
+
+  &--back {
+    background-color: transparent;
+  }
+}
+
+.step__country-dropdown-title {
+  margin: 0;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  background-color: @blue-4;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.step__select-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 22px;
+
+  // маленькая стрелочка вниз
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 47px;
+    left: 170px;
+
+    width: 5px;
+    height: 10px;
+
+    background-image: url("../img/small-arrow.svg");
+
+    opacity: 0.3;
+  }
+
+  &--add-country::before {
+    display: none;
+  }
+
+  &:nth-of-type(4) {
+    margin-bottom: 5px;
+  }
+}
+
+.step__select {
+  display: flex;
+  align-items: center;
+  width: 168px;
+  height: 42px;
+  padding-left: 12px;
+
+  .font-name;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: @blue-4;
+
+  background-color: transparent;
+  border-radius: 4px;
+  border: solid 1px @grey-2;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: @grey-10;
+  }
+
+  &:hover + .step__select-dropdown {
+    fill: @grey-10;
+  }
+
+  &--choose-country {
+    width: 220px;
+  }
+
+  &--add-country {
+    width: 220px;
+
+    border: none;
+
+    &:hover {
+      background-color: @grey-1;
+      border: none;
+    }
+
+    &:focus,
+    &:active {
+      color: rgba(@blue-4, 0.3);
+      background-color: @grey-3;
+    }
+  }
+}
+
+// кнопка выпадающего списка
+.step__select-dropdown {
+  position: absolute;
+  left: 139px;
+
+  width: 50px;
+  height: 40px;
+  padding-top: 11px;
+  padding-left: 26px;
+
+  background-image: linear-gradient(to right, rgba(#ffffff, 0.0001) 5%, #ffffff 40%);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 50px 37px;
+
+  fill: rgba(#000000, 0.3);
+
+  cursor: pointer;
+
+
+  &--choose-country {
+    right: 29px;
+    left: auto;
+  }
+}
+
+.step__select-button {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+  width: 53px;
+  height: 42px;
+  margin-left: -1px;
+
+  border-radius: 4px;
+  border: solid 1px @grey-2;
+
+  &--bosnia {
+    background-image: url("../img/flag-bosnia.svg");
+    background-position: center;
+    background-size: 35px 24px;
+    background-repeat: no-repeat;
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
+    background-position: center;
+    background-size: 35px 24px;
+    background-repeat: no-repeat;
+  }
+
+  // черный круг
+  &::before {
+    content: "";
+
+    position: absolute;
+
+    left: -4px;
+    top: 15px;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #000000;
+    border-radius: 50%;
+  }
+
+  &--choose-country::before {
+    left: -57px;
+
+    background-color: #ffffff;
+    border: 1px solid @grey-2;
+  }
+
+  // черный круг
+  &--add-country::before {
+    left: -57px;
+
+    background-color: @grey-1;
+    border: 1px solid @grey-2;
+  }
+
+  // фон для кнопки-крестик
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: -11px;
+    left: 41px;
+
+    width: 21px;
+    height: 21px;
+
+    background-color: @grey-1;
+    border-radius: 50%;
+  }
+
+  &--choose-country::after {
+    left: -11px;
+  }
+
+  &--add-country::after {
+    display: none;
+  }
+
+  // поле "Выберите страну"
+  &--choose-country {
+    width: 0;
+    background: none;
+    border: 0;
+  }
+
+  // поле "Добавить страну"
+  &--add-country {
+    width: 0;
+    background: none;
+    border: 0;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &:last-of-type::after {
+    border: none;
+  }
+}
+
+//кнопка-крестик
+.step__select-button-image {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  right: -5px;
+
+  opacity: 0.1;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.1;
+  }
+
+  // в поле "Добавить страну" заменяется на "плюс"
+  &--add-country {
+    top: 10px;
+    right: 12px;
+    width: 16px;
+    height: 14px;
+
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.1;
+    }
+  }
+}
+
+.step__country-dropdown {
+  position: absolute;
+  z-index: 10;
+  top: 294px;
+  left: auto;
+
+  flex-direction: column;
+  display: none;
+  width: 220px;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  border-bottom-left-radius: @radius-2;
+  border-bottom-right-radius: @radius-2;
+
+  &--show {
+    display: flex;
+  }
+}
+
+.step__country {
+  position: relative;
+
+  display: block;
+  margin-bottom: 12px;
+  padding-left: 12px;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+
+  &--bosnia::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: -14px;
+
+    width: 17px;
+    height: 287px;
+
+    background-image: url("../img/line.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 17px 287px;
+  }
+}
+
+.step__country-plan {
+  width: 220px;
+  height: 220px;
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-left: 14px;
+  padding-bottom: 13px;
+
+  .font-name;
+  font-size: 16px;
+  line-height: 1.38;
+  color: @grey-5;
+
+  border-radius: 4px;
+  border: solid 1px @grey-2;
+
+  resize: none;
+
+  &::placeholder {
+    color: rgba(@grey-5, 0.3);
+  }
+
+  &:hover {
+    border-color: @grey-10;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: @blue-1;
+  }
+}
+
+.step__country-plan-wrapper {
+  position: relative;
+
+  margin-bottom: 17px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 85px;
+    height: 25px;
+
+    background-size: contain, 35px 24px;
+    background-position: 0 0, right;
+    background-repeat: no-repeat;
+  }
+
+  &--bosnia::after {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, #ffffff 49px, rgba(255, 255, 255, 0) 49px), url("../../img/flag-bosnia.svg");
+  }
+
+  &--czech::after {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, #ffffff 49px, rgba(255, 255, 255, 0) 49px), url("../../img/flag-czech.svg");
+  }
+
+  &--error {
+    font-weight: 400;
+    line-height: 1.2;
+
+    .step__country-plan {
+      border-color: #f47e7e;
+    }
+  }
+
+  &--error::before {
+    content: "Это поле должно быть заполнено";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 220px;
+    height: 57px;
+    padding-top: 10px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    color: #ff0000;
+
+    background-color: #ffefef;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: solid 1px #f47e7e;
+    border-top: none;
+  }
+}
+
+.step__dropdown-close-button {
+  position: absolute;
+  top: 12px;
+  right: 17px;
+
+  background-color: transparent;
+  border: 0;
+
+  fill: #ffffff;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.step__dropdown-button-image {
+  width: 9px;
+  height: 9px;
+}
