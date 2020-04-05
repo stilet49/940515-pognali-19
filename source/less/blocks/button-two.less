@@ -91,3 +91,55 @@
     border-right-color: rgba(@blue-4, 0.3);
   }
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .button-two {
+    width: 285px;
+    height: 81px;
+
+    font-size: 24px;
+
+    border-radius: @radius-2;
+
+    &::after {
+      top: calc(50% - 7px);
+      right: 25px;
+    }
+
+    &--back {
+      padding-left: 70px;
+    }
+
+    &--back::after {
+      right: auto;
+      top: calc(50% - 7px);
+      left: 60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button-two {
+    width: 285px;
+    height: 81px;
+
+    font-size: 24px;
+
+    border-radius: @radius-2;
+
+    &::after {
+      top: calc(50% - 7px);
+      right: 25px;
+    }
+
+    &--back {
+      padding-left: 75px;
+    }
+
+    &--back::after {
+      top: calc(50% - 7px);
+      right: auto;
+      left: 36px;
+    }
+  }
+}

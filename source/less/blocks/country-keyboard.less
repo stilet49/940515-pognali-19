@@ -44,3 +44,65 @@
     cursor: pointer;
   }
 }
+
+@media (max-width: @mobile-width-only) {
+  .country-keyboard__item {
+    &:last-child {
+      width: 43px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .country-keyboard {
+    margin-left: -20px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &--catalog {
+      .country-keyboard__item {
+        width: 77px;
+        height: 82px;
+        margin-right: 46px;
+        font-size: 60px;
+        line-height: 0.4;
+        color: rgba(@blue-2, 0.2);
+
+        background-color: transparent;
+        border: 0;
+
+        &--checked {
+          color: @blue-2;
+        }
+      }
+    }
+  }
+
+  .country-keyboard__item {
+    width: 52px;
+    height: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-keyboard {
+    margin-top: 37px;
+    margin-bottom: 34px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    border-collapse: separate;
+    border-spacing: 15px;
+
+    &--catalog {
+      display: none;
+    }
+  }
+
+  .country-keyboard__item {
+    width: 60px;
+    height: 70px;
+  }
+}

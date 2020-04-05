@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css" >
   </head>
   <body>
@@ -477,7 +478,7 @@
 
               <button class="travelmate-form__close-button travelmate-form__close-button--hobby" type="button" aria-label="Кнопка открыть / закрыть блок «Хобби»">
                 <svg class="travelmate-form__close-button-icon" width="8" height="4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+                  viewBox="0 0 10 5" style="enable-background: new 0 0 10 5;" xml:space="preserve">
                   <polygon points="5,5 0,0 10,0 "/>
                 </svg>
               </button>
@@ -499,7 +500,7 @@
 
               <button class="travelmate-form__close-button travelmate-form__close-button--music" type="button" aria-label="Кнопка открыть / закрыть блок «Музыка»">
                 <svg class="travelmate-form__close-button-icon" width="8" height="4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+                  viewBox="0 0 10 5" style="enable-background: new 0 0 10 5;" xml:space="preserve">
                   <polygon points="5,5 0,0 10,0 "/>
                 </svg>
               </button>
@@ -521,7 +522,7 @@
 
               <button class="travelmate-form__close-button travelmate-form__close-button--food" type="button" aria-label="Кнопка открыть / закрыть блок «Еда»">
                 <svg class="travelmate-form__close-button-icon" width="8" height="4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+                  viewBox="0 0 10 5" style="enable-background: new 0 0 10 5;" xml:space="preserve">
                   <polygon points="5,5 0,0 10,0 "/>
                 </svg>
             </button>
@@ -589,7 +590,7 @@
 
               <button class="travelmate-form__close-button travelmate-form__close-button--transport" type="button" aria-label="Кнопка открыть / закрыть блок «Транспорт»">
                 <svg class="travelmate-form__close-button-icon" width="8" height="4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+                  viewBox="0 0 10 5" style="enable-background: new 0 0 10 5;" xml:space="preserve">
                   <polygon points="5,5 0,0 10,0 "/>
                 </svg>
               </button>
@@ -612,7 +613,7 @@
 
               <button class="travelmate-form__close-button travelmate-form__close-button--level" type="button" aria-label="Кнопка открыть / закрыть блок «Левел»">
                 <svg class="travelmate-form__close-button-icon" width="8" height="4" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  viewBox="0 0 10 5" style="enable-background:new 0 0 10 5;" xml:space="preserve">
+                  viewBox="0 0 10 5" style="enable-background: new 0 0 10 5;" xml:space="preserve">
                   <polygon points="5,5 0,0 10,0 "/>
                 </svg>
               </button>
@@ -967,14 +968,18 @@
             </li>
           </ul>
           <a class="travelmates-filtered__button button-one button-one--bgc" href="#">Показать еще</a>
+          <!-- Постраничная навигация -->
           <ul class="travelmates-filtered__pagination pagination">
-            <li class="pagination__button pagination__button--back">
-              <a class="pagination__link" href="#" aria-label="Назад"></a>
-            </li>
-            <li class="pagination__button pagination__button--forward">
-              <a class="pagination__link" href="#" aria-label="Вперед"></a>
-            </li>
+            <li class="pagination__item pagination__item--active"><a class="pagination__link"></a>1</li>
+            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+            <li class="pagination__button pagination__button--back"><a class="pagination__link" href="#" aria-label="Назад"></a></li>
+            <li class="pagination__button pagination__button--forward"><a class="pagination__link" href="#" aria-label="Вперед"></a></li>
           </ul>
+
+          <a class="travelmates-filtered__button-back" href="#" aria-label="Кнопка вперед"></a>
+          <a class="travelmates-filtered__button-forward" href="#" aria-label="Кнопка назад"></a>
         </section>
       </div>
     </main>

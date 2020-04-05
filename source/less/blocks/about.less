@@ -1,6 +1,9 @@
-@padding-top-mobile: 33px;
-@padding-bottom-mobile: 45px;
-
+@about-padding-top-mobile: 33px;
+@about-padding-bottom-mobile: 45px;
+@about-padding-top-tablet: 43px;
+@about-padding-bottom-tablet: 89px;
+@about-padding-top-desktop: 193px;
+@about-padding-bottom-desktop: 165px;
 
 .about {
   .font-name;
@@ -13,8 +16,8 @@
 
 .about__inner {
   align-items: flex-start;
-  padding-top: @padding-top-mobile;
-  padding-bottom: @padding-top-mobile;
+  padding-top: @about-padding-top-mobile;
+  padding-bottom: @about-padding-top-mobile;
 
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
@@ -35,5 +38,134 @@
 
   br {
     display: none;
+  }
+}
+
+.about__more-button {
+  display: none;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .about {
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .about__inner {
+    position: relative;
+
+    padding-top: @about-padding-top-tablet;
+    padding-bottom: @about-padding-bottom-tablet;
+
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right 8px top 48px;
+    background-size: 376px auto;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+
+      width: 688px;
+      height: 213px;
+
+      background-color: @blue-5;
+      border-radius: @radius-2;
+    }
+  }
+
+  .about__title {
+    margin-left: 34px;
+    margin-bottom: 40px;
+  }
+
+  .about__text {
+    width: 312px;
+    margin-left: 36px;
+    margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-bottom: 52px;
+    }
+
+    br {
+      display: block;
+    }
+  }
+
+  .about__more-button {
+    display: flex;
+    width: 274px;
+    margin-left: 36px;
+    padding-left: 30px;
+
+    font-size: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .about__inner {
+    position: relative;
+
+    padding-top: @about-padding-top-desktop;
+    padding-bottom: @about-padding-bottom-desktop;
+
+    align-items: flex-start;
+
+    background-image: url("../img/about-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: right @desktop-padding bottom 0;
+    background-size: 630px auto;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 132px;
+      left: 57px;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: @blue-5;
+      border-radius: @radius-2;
+    }
+  }
+
+  .about__title {
+    margin-bottom: 59px;
+    margin-left: 70px;
+  }
+
+  .about__text {
+    width: 640px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+
+    &:nth-of-type(2) {
+      width: 420px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 80px;
+    }
+  }
+
+  .about__more-button {
+    display: flex;
+    width: 274px;
+    margin-left: 72px;
+    padding-left: 30px;
+
+    font-size: 24px;
   }
 }

@@ -42,8 +42,7 @@
 }
 
 .pagination__button {
-  width: 135px;
-  //width: 30px;
+  width: 30px;
   height: 50px;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,7 +52,6 @@
 
   &--back {
     background-image: url("../img/triangle-arrow-left.svg");
-    border-right: 1px solid #edeff6;
   }
 
   &--forward {
@@ -67,5 +65,50 @@
   &:focus,
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .pagination__item {
+    display: none;
+  }
+
+  .pagination__button {
+    width: 135px;
+
+    &--back {
+      border-right: 1px solid @grey-1;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .pagination {
+    padding-top: 20px;
+    padding-right: 21px;
+    padding-bottom: 20px;
+    padding-left: 28px;
+  }
+
+  .pagination__button {
+    width: 43px;
+  }
+
+  .pagination__button--back {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .pagination {
+    padding-top: 23px;
+    padding-right: 34px;
+    padding-bottom: 15px;
+    padding-left: 28px;
+  }
+
+  .pagination__button--back {
+    margin-left: auto;
+    margin-right: 13px;
   }
 }

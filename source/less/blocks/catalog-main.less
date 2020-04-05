@@ -71,3 +71,79 @@
     margin-top: 77px;
   }
 }
+
+@media (max-width: @mobile-width-only) {
+  .catalog-main__to-main-page-button {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .catalog-main {
+    padding-bottom: @radius-5;
+  }
+
+  .catalog-main__title-wrapper {
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .catalog-main__title-inner {
+    padding-top: 54px;
+    padding-right: 77px;
+    padding-left: 74px;
+  }
+
+  .catalog-main__find-travelmate {
+    margin-top: 50px;
+
+    &--margin {
+      margin-top: 184px;
+    }
+  }
+
+  .catalog-main__to-main-page-button {
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-main {
+    padding-bottom: @radius-5;
+  }
+
+  .catalog-main__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .catalog-main__title-wrapper {
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .catalog-main__title-inner {
+    padding-top: 110px;
+    padding-right: 123px;
+    padding-left: 127px;
+  }
+
+  .catalog-main__travelmates-filtered {
+    margin-top: 77px;
+  }
+
+  .catalog-main__find-travelmate {
+    order: 1;
+    margin-top: 77px;
+  }
+
+  .catalog-main__to-main-page-button {
+    padding-top: 18px;
+
+    line-height: 2;
+
+    &::after {
+      top: 25px;
+    }
+  }
+}
