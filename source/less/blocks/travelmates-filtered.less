@@ -49,3 +49,84 @@
     background-color: transparent;
   }
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .travelmates-filtered__pagination {
+    margin-bottom: 62px;
+  }
+
+  .travelmates-filtered__button {
+    width: 192px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    padding-left: 39px;
+
+    &::before {
+      top: 10px;
+      left: 0;
+
+      width: 27px;
+      height: 27px;
+
+      background-image: url("../img/show-more-plus.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travelmates-filtered {
+    width: 950px;
+  }
+
+  .travelmates-filtered__inner {
+    display: block;
+    padding: 0;
+    width: 950px;
+  }
+
+  .travelmates-filtered__list {
+    margin-bottom: 56px;
+  }
+
+  .travelmates-filtered__item {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 49px;
+      left: 630px;
+
+      width: 1px;
+      height: 187px;
+
+      background-color: #000000;
+      background-image: linear-gradient(to bottom, #ffffff, #000000 25%, #000000 75%, #ffffff);
+
+      opacity: 0.1;
+    }
+  }
+
+  .travelmates-filtered__button {
+    justify-content: flex-start;
+    width: 262px;
+    margin: 0 auto;
+    margin-bottom: 57px;
+    padding-left: 52px;
+
+    &::before {
+      top: 10px;
+      left: 0;
+
+      width: 27px;
+      height: 27px;
+
+      background-image: url("../img/show-more-plus.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .travelmates-filtered__pagination {
+    margin-bottom: 77px;
+  }
+}

@@ -36,3 +36,39 @@
     color: @blue-2;
   }
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .continent-list {
+    flex-direction: row;
+  }
+
+  .continent-list__item {
+    margin-right: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .filter-country__title {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .continent-list {
+    flex-direction: row;
+  }
+
+  .continent-list__item {
+    margin-right: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

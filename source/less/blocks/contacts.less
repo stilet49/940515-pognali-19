@@ -86,3 +86,99 @@
     height: 22px;
   }
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .contacts {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .contacts__button {
+    padding-top: 20px;
+    padding-bottom: 19px;
+    padding-left: 91px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+    }
+  }
+
+  .contacts__button-icon {
+    &--phone {
+      top: 21px;
+      left: 21px;
+
+      width: 27px;
+      height: 27px;
+    }
+
+    &--email {
+      top: 25px;
+      left: 20px;
+
+      width: 27px;
+      height: 19px;
+    }
+
+    &--address {
+      top: 20px;
+      left: 23px;
+
+      width: 21px;
+      height: 31px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .contacts__button {
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-left: 121px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
+
+    &--margin {
+      margin-right: 112px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .contacts__button-icon {
+    &--phone {
+      top: 26px;
+      left: 28px;
+
+      width: 36px;
+      height: 36px;
+    }
+
+    &--email {
+      top: 31px;
+      left: 28px;
+
+      width: 36px;
+      height: 26px;
+    }
+
+    &--address {
+      top: 21px;
+      left: 31px;
+
+      width: 28px;
+      height: 43px;
+    }
+  }
+}
