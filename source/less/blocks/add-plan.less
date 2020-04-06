@@ -1,6 +1,9 @@
-@padding-top-mobile: 30px;
-@padding-bottom-mobile: 64px;
-
+@add-plan-padding-top-mobile: 30px;
+@add-plan-padding-bottom-mobile: 64px;
+@add-plan-padding-top-tablet: 46px;
+@add-plan-padding-bottom-tablet: 83px;
+@add-plan-padding-top-desktop: 49px;
+@add-plan-padding-bottom-desktop: 90px;
 
 .add-plan {
   .font-name;
@@ -16,8 +19,8 @@
 .add-plan__inner {
   position: relative;
 
-  padding-top: @padding-top-mobile;
-  padding-bottom: @padding-bottom-mobile;
+  padding-top: @add-plan-padding-top-mobile;
+  padding-bottom: @add-plan-padding-bottom-mobile;
 }
 
 .add-plan__title {
@@ -33,4 +36,56 @@
 
   top: 39px;
   right: 48px;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .add-plan {
+    border-top-right-radius: @radius-4;
+    border-top-left-radius: @radius-4;
+  }
+
+  .add-plan__inner {
+    padding-top: @add-plan-padding-top-tablet;
+    padding-right: 75px;
+    padding-bottom: @add-plan-padding-bottom-tablet;
+    padding-left: 75px;
+  }
+
+  .add-plan__title {
+    align-self: flex-start;
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.39;
+  }
+
+  .add-plan__controls-list {
+    top: 67px;
+    right: 80px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-plan {
+    border-top-right-radius: @radius-5;
+    border-top-left-radius: @radius-5;
+  }
+
+  .add-plan__inner {
+    padding-top: @add-plan-padding-top-desktop;
+    padding-bottom: @add-plan-padding-bottom-desktop;
+  }
+
+  .add-plan__title {
+    align-self: flex-start;
+    margin-bottom: 49px;
+    margin-left: 71px;
+
+    font-size: 36px;
+    line-height: 1.39;
+  }
+
+  .add-plan__controls-list {
+    display: none;
+  }
 }

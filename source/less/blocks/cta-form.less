@@ -1,6 +1,9 @@
-@padding-top-mobile: 104px;
-@padding-bottom-mobile: 29px;
-
+@cta-form-padding-top-mobile: 104px;
+@cta-form-padding-bottom-mobile: 29px;
+@cta-form-padding-top-tablet: 137px;
+@cta-form-padding-bottom-tablet: 58px;
+@cta-form-padding-top-desktop: 166px;
+@cta-form-padding-bottom-desktop: 100px;
 
 .cta-form {
   background-color: @blue-2;
@@ -10,8 +13,8 @@
 }
 
 .cta-form__inner {
-  padding-top: @padding-top-mobile;
-  padding-bottom: @padding-bottom-mobile;
+  padding-top: @cta-form-padding-top-mobile;
+  padding-bottom: @cta-form-padding-bottom-mobile;
 }
 
 .cta-form__title {
@@ -66,4 +69,117 @@
   align-self: flex-start;
 
   color: @yellow-1;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .cta-form {
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .cta-form__inner {
+    padding-top: @cta-form-padding-top-tablet;
+    padding-bottom: @cta-form-padding-bottom-tablet;
+  }
+
+  .cta-form__title {
+    margin-bottom: 58px;
+  }
+
+  .cta-form__text {
+    width: auto;
+    margin-bottom: 62px;
+
+    &:last-of-type {
+      margin-bottom: 43px;
+    }
+  }
+
+  .cta-form__login-form {
+    margin-bottom: 30px;
+  }
+
+  .cta-form__input {
+    width: 617px;
+  }
+
+  .cta-form__contacts {
+    align-self: flex-start;
+    margin-left: 38px;
+  }
+
+  .cta-form__button {
+    top: 0;
+    right: 0;
+
+    width: 82px;
+    height: 81px;
+
+    font-size: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cta-form {
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .cta-form__inner {
+    align-items: center;
+
+    padding-top: @cta-form-padding-top-desktop;
+    padding-bottom: @cta-form-padding-bottom-desktop;
+  }
+
+  .cta-form__title {
+    margin-bottom: 60px;
+  }
+
+  .cta-form__text {
+    width: auto;
+    margin-bottom: 56px;
+
+    &:last-of-type {
+      letter-spacing: 0.4px;
+      margin-bottom: 45px;
+    }
+  }
+
+  .cta-form__contacts-button {
+    margin-right: 112px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .cta-form__login-form {
+    margin-bottom: 40px;
+  }
+
+  .cta-form__input {
+    width: 1175px;
+    padding-left: 32px;
+  }
+
+  .cta-form__contacts {
+    align-self: center;
+    display: flex;
+  }
+
+  .cta-form__button {
+    top: 0;
+    right: 0;
+
+    width: 325px;
+    height: 81px;
+    padding-left: 35px;
+
+    font-size: 24px;
+
+    background-position: 278px center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }

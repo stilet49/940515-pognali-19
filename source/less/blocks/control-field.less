@@ -203,3 +203,197 @@
   width: 9px;
   height: 18px;
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .control-field__label {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 22px;
+    padding-top: 25px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &--days,
+    &--travelmates {
+      border-top: 1px solid @grey-3;
+    }
+
+    &--travelmates::after {
+      content: "чел.";
+
+      position: absolute;
+      right: 0;
+
+      opacity: 0.3;
+    }
+
+    &--days::after {
+      content: "дн.";
+
+      position: absolute;
+      right: 0;
+
+      opacity: 0.3;
+    }
+
+    &--date {
+      margin: 0;
+      padding-top: 26px;
+    }
+  }
+
+  .control-field__input {
+    width: 531px;
+    height: 70px;
+    margin-bottom: 34px;
+
+    font-size: 20px;
+
+    &--date {
+      height: 85px;
+      margin-bottom: 33px;
+
+      font-size: 36px;
+    }
+  }
+
+  .control-field__button {
+    &--minus {
+      top: 25px;
+      left: 23px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../img/qty-minus.svg");
+      background-size: 20px 2px;
+    }
+
+    &--plus {
+      top: 25px;
+      right: 23px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../img/qty-plus.svg");
+      background-size: 20px 20px;
+    }
+
+    &--back,
+    &--forward {
+      margin-top: 26px;
+    }
+
+    &--forward {
+      margin-right: 12px;
+    }
+
+    &--back {
+      margin-left: 14px;
+    }
+  }
+
+  .control-field__button-icon {
+    width: 19px;
+    height: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .control-field {
+    position: relative;
+
+    align-items: center;
+  }
+
+  .control-field__label {
+    width: 200px;
+    margin-right: 18px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &--travelmates::after {
+      content: "чел.";
+
+      position: absolute;
+      right: auto;
+      left: 436px;
+
+      opacity: 1;
+    }
+
+    &--days::after {
+      content: "дн.";
+
+      position: absolute;
+      right: auto;
+      left: 436px;
+
+      opacity: 1;
+    }
+  }
+
+  .control-field__input {
+    width: 181px;
+    height: 70px;
+    margin-bottom: 14px;
+
+    font-size: 20px;
+
+    &--date {
+      width: 1000px;
+      height: 85px;
+      margin-bottom: 7px;
+
+      font-size: 36px;
+    }
+  }
+
+  .control-field__button {
+    &--forward {
+      top: 5px;
+      right: 1px;
+    }
+
+    &--back {
+      top: 5px;
+      left: 1px;
+    }
+
+    &--minus {
+      top: 25px;
+      left: 20px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../img/qty-minus.svg");
+      background-size: 20px 2px;
+    }
+
+    &--plus {
+      top: 25px;
+      right: 20px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../img/qty-plus.svg");
+      background-size: 20px 20px;
+    }
+
+    &--back,
+    &--forward {
+      margin-top: 22px;
+    }
+  }
+
+  .control-field__button-icon {
+    width: 19px;
+    height: 34px;
+  }
+}
