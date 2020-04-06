@@ -23,3 +23,35 @@
     border-radius: 2.4px;
   }
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .page-main-heading {
+    padding-bottom: 62px;
+
+    font-size: 60px;
+    line-height: 1.17;
+
+    &::before {
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main-heading {
+    padding-bottom: 63px;
+
+    font-size: 60px;
+    line-height: 1.17;
+
+    &::before {
+      bottom: -4px;
+
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
+}

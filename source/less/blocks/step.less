@@ -587,3 +587,737 @@
   width: 9px;
   height: 9px;
 }
+
+@media (max-width: @mobile-width-only) {
+  .step__button {
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    padding-top: 5px;
+    padding-right: 24px;
+    padding-bottom: 5px;
+
+    font-size: 17px;
+    line-height: 1.76;
+    text-transform: uppercase;
+
+    border-radius: @radius-3;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .step {
+    align-items: flex-start;
+    width: 618px;
+    margin-bottom: 40px;
+    padding-top: 48px;
+    padding-right: 43px;
+    padding-bottom: 49px;
+    padding-left: 43px;
+
+    border-radius: @radius-4;
+
+    &--two {
+      margin-bottom: 48px;
+    }
+
+    &--three {
+      padding-bottom: 44px;
+    }
+  }
+
+  .step__title {
+    order: -4;
+    width: @step-tablet-width;
+    margin-bottom: 33px;
+
+    font-size: 36px;
+  }
+
+  .step__title-new-line {
+    display: block;
+  }
+
+  .step__controls-list {
+    display: none;
+  }
+
+  .step__text {
+    order: -3;
+    width: @step-tablet-width;
+    margin-bottom: 38px;
+
+    font-size: 20px;
+    line-height: 1.2;
+
+    &--break {
+      display: block;
+    }
+
+    &--step-two {
+      margin-bottom: 34px;
+    }
+
+    &--step-three {
+      margin-bottom: 32px;
+    }
+  }
+
+  .step__control-field {
+    width: @step-tablet-width;
+  }
+
+  .step__control-field:first-of-type {
+    order: -2;
+  }
+
+  .step__checkbox-wrapper {
+    order: -1;
+    width: @step-tablet-width;
+    margin-bottom: 34px;
+  }
+
+  .step__checkbox-label {
+    padding-left: 59px;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &::before {
+      top: -6px;
+      left: 0;
+
+      width: 36px;
+      height: 36px;
+
+      border-radius: 4px;
+    }
+  }
+
+  .step__checkbox-icon {
+    top: 6px;
+    left: 12px;
+
+    width: 12px;
+    height: 12px;
+  }
+
+  .step__select-wrapper {
+    justify-content: flex-start;
+    padding-bottom: 15px;
+
+    //вертикальная линия
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 396px;
+      top: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: @grey-6;
+      background-image: none;
+
+      opacity: 1;
+    }
+
+    &--add-country::before {
+      display: block;
+    }
+
+    &:first-of-type {
+      padding-top: 41px;
+
+      border-top: 1px solid @grey-6;
+    }
+
+    &:first-of-type::after {
+      top: 68px;
+    }
+
+    &:nth-of-type(4) {
+      margin-bottom: 34px;
+    }
+  }
+
+  .step__select {
+    width: 369px;
+    height: 70px;
+    padding-left: 27px;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .step__select-dropdown {
+    bottom: 30px;
+    left: 300px;
+
+    &--add-country {
+      bottom: 0;
+    }
+  }
+
+  .step__select-dropdown-image {
+    width: 17px;
+    height: 9px;
+
+    &--add-country {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .step__select-button {
+    width: 162px;
+    height: 70px;
+
+    border-radius: 0;
+    border: none;
+
+    background-position: 54px center;
+
+    &--bosnia {
+      background-size: 70px 47px;
+    }
+
+    &--czech {
+      background-size: 70px 47px;
+    }
+
+    // черный круг
+    &::before {
+      left: 22px;
+      top: 25px;
+
+      width: 15px;
+      height: 15px;
+    }
+
+    // фон для кнопки-крестик
+    &::after {
+      display: none;
+    }
+  }
+
+  .step__select-button-image {
+    top: 27px;
+    right: -3px;
+
+    width: 17px;
+    height: 17px;
+
+    // в поле "Добавить страну" заменяется на "плюс"
+    &--add-country {
+      top: 23px;
+      right: 187px;
+
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .step__country-dropdown {
+    top: 518px;
+    left: auto;
+
+    flex-direction: row;
+    width: 575px;
+    padding-left: 27px;
+
+    border-bottom-left-radius: @radius-4;
+    border-bottom-right-radius: @radius-4;
+  }
+
+  .step__country-dropdown-title {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 369px;
+    height: 70px;
+    padding-top: 27px;
+    padding-right: 27px;
+    padding-bottom: 27px;
+    padding-left: 27px;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .step__country-keyboard {
+    margin-top: 34px;
+    margin-bottom: 39px;
+  }
+
+  .step__dropdown-close-button {
+    top: -45px;
+    right: auto;
+    left: 322px;
+  }
+
+  .step__dropdown-button-image {
+    width: 17px;
+    height: 17px;
+  }
+
+  .step__button {
+    padding-left: 34px;
+
+    &--back {
+      justify-content: flex-end;
+      width: 249px;
+    }
+  }
+
+  .step__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .step__country {
+    margin-bottom: 40px;
+    padding: 0;
+    padding-top: 45px;
+
+    font-size: 30px;
+    line-height: 0.6;
+
+    &--bosnia {
+      border-top: 1px solid #d6d9e6;
+    }
+
+    &--bosnia::before {
+      top: auto;
+      right: -35px;
+      left: auto;
+
+      width: 15px;
+      height: 276px;
+
+      background-image: url("../img/line-tablet.png");
+      background-size: 15px 276px;
+    }
+  }
+
+  .step__country-plan {
+    width: 499px;
+    height: 142px;
+    padding-top: 21px;
+    padding-right: 29px;
+    padding-left: 19px;
+    padding-bottom: 21px;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .step__country-plan-wrapper {
+    margin-bottom: 47px;
+
+    font-size: 20px;
+
+    &--error::before {
+      width: 499px;
+      padding-top: 19px;
+    }
+
+    &--bosnia {
+      margin-bottom: 8px;
+    }
+
+    &::after {
+      top: 30px;
+      right: 0;
+
+      width: 70px;
+      height: 47px;
+
+      background-size: 0, 70px 47px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .step {
+    width: 1320px;
+    margin-bottom: 44px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 92px;
+    padding-right: 162px;
+    padding-bottom: 99px;
+    padding-left: 162px;
+
+    border-radius: @radius-5;
+  }
+
+  .step__title {
+    order: -4;
+    width: 500px;
+    margin-bottom: 27px;
+
+    font-size: 36px;
+    line-height: 1.39;
+    letter-spacing: -0.3px;
+  }
+
+  .step__title-new-line {
+    display: inline;
+  }
+
+  .step__controls-list {
+    position: absolute;
+    top: 110px;
+    right: 206px;
+
+    display: block;
+  }
+
+  .step__text {
+    order: -3;
+    width: 600px;
+    margin-bottom: 54px;
+
+    font-size: 20px;
+    line-height: 1.2;
+
+    &--break {
+      display: block;
+    }
+  }
+
+  .step__control-field {
+    width: auto;
+  }
+
+  .step__control-field:first-of-type {
+    order: -2;
+    padding-top: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 1000px;
+      height: 1px;
+
+      background-color: @grey-6;
+    }
+  }
+
+  .step__control-field:nth-of-type(2) {
+    margin-bottom: 10px;
+  }
+
+  .step__checkbox-wrapper {
+    width: 245px;
+    margin-top: -36px;
+    margin-right: -2px;
+    margin-bottom: 0;
+
+    position: absolute;
+    top: 365px;
+    right: 162px;
+
+    order: -1;
+  }
+
+  .step__checkbox-label {
+    margin-left: auto;
+    padding-left: 59px;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &::before {
+      top: -10px;
+      left: 0;
+
+      width: 36px;
+      height: 36px;
+
+      border-radius: 4px;
+    }
+  }
+
+  .step__checkbox-icon {
+    top: 1px;
+    left: 12px;
+
+    width: 12px;
+    height: 12px;
+  }
+
+  .step__select-wrapper {
+    justify-content: flex-start;
+    padding-bottom: 15px;
+
+    //вертикальная линия
+    &::before {
+      content: "";
+      position: absolute;
+
+      left: 774px;
+      top: 0;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: @grey-6;
+      background-image: none;
+
+      opacity: 1;
+    }
+
+    &--add-country::before {
+      display: block;
+    }
+
+    // кнопка выпадающего списка
+    &::after {
+      left: 686px;
+      top: 27px;
+
+      width: 17px;
+      height: 9px;
+
+      background-position: 0 0;
+      background-size: 17px 9px;
+    }
+
+    &:first-of-type {
+      padding-top: 61px;
+
+      border-top: 1px solid @grey-6;
+    }
+
+    &:first-of-type::after {
+      top: 68px;
+    }
+
+    &:nth-of-type(4) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .step__select {
+    width: 730px;
+    height: 70px;
+    padding-left: 22px;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .step__select-dropdown {
+    bottom: 28px;
+    left: 658px;
+
+    background: none;
+  }
+
+  .step__select-dropdown-image {
+    width: 17px;
+    height: 9px;
+
+    &--add-country {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .step__select-button {
+    width: 269px;
+    height: 70px;
+
+    border-radius: 0;
+    border: none;
+
+    background-position: 87px center;
+
+    &--bosnia {
+      background-size: 70px 47px;
+    }
+
+    &--czech {
+      background-size: 70px 47px;
+    }
+
+    // черный круг
+    &::before {
+      left: 40px;
+      top: 25px;
+
+      width: 15px;
+      height: 15px;
+      margin: 0;
+    }
+
+    // фон для кнопки-крестик
+    &::after {
+      display: none;
+    }
+  }
+
+  .step__select-button-image {
+    top: 27px;
+    right: 5px;
+
+    width: 17px;
+    height: 17px;
+
+    // в поле "Добавить страну" заменяется на "плюс"
+    &--add-country {
+      top: 23px;
+      left: -45px;
+
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .step__country-dropdown {
+    top: 574px;
+    left: auto;
+
+    flex-direction: row;
+    width: 730px;
+    padding-left: 27px;
+
+    border-bottom-left-radius: @radius-4;
+    border-bottom-right-radius: @radius-4;
+  }
+
+  .step__country-dropdown-title {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 730px;
+    height: 70px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .step__dropdown-close-button {
+    top: -45px;
+    right: 28px;
+  }
+
+  .step__dropdown-button-image {
+    width: 17px;
+    height: 17px;
+  }
+
+  .step__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .step__button--forward {
+    padding-left: 30px;
+  }
+
+  .step__button--back {
+    width: 224px;
+  }
+
+  .step__country {
+    margin-bottom: 43px;
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 0.6;
+    letter-spacing: 0.4px;
+
+    &--bosnia::after {
+      content: "";
+
+      position: absolute;
+      top: -88px;
+      left: 0;
+
+      width: 997px;
+      height: 1px;
+
+      background-color: #d4d9eb;
+    }
+
+    &--bosnia::before {
+      top: 2px;
+      right: -50px;
+
+      left: auto;
+      width: 15px;
+      height: 276px;
+      background-image: url("../img/line-tablet.png");
+      background-size: 15px 276px;
+    }
+  }
+
+  .step__country-plan {
+    width: 730px;
+    height: 142px;
+    padding-top: 24px;
+    padding-right: 22px;
+    padding-left: 22px;
+    padding-bottom: 28px;
+
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .step__country-plan-wrapper {
+    margin-bottom: 51px;
+
+    font-size: 20px;
+
+    &--error::before {
+      width: 730px;
+      padding-top: 19px;
+    }
+
+    &:first-of-type {
+      padding-top: 88px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 47px;
+
+      background-size: 0, 70px 47px;
+    }
+
+    &--bosnia::after {
+      top: 76px;
+      right: -153px;
+    }
+
+    &--czech::after {
+      top: -12px;
+      right: -153px;
+    }
+  }
+}

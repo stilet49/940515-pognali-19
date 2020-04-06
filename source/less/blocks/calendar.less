@@ -9,6 +9,14 @@
   color: @grey-5;
 
   border-collapse: collapse;
+
+  // :focus-within {
+  //  color: @grey-2;
+
+  //   background-color: @blue-4;
+  //   border: 2px solid @yellow-5;
+  //   outline: 3px solid @yellow-5;
+  // }
 }
 
 .calendar__item {
@@ -84,5 +92,120 @@
 
   &:hover {
     color: @yellow-5;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .calendar {
+    width: 531px;
+    margin-bottom: 46px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 2px;
+  }
+
+  .calendar__item {
+    width: 75px;
+    height: 69px;
+  }
+
+  .calendar__days-of-week .calendar__item {
+    height: 34px;
+
+    &:first-child::after {
+      content: "н";
+    }
+
+    &:nth-child(2)::after {
+      content: "т";
+    }
+
+    &:nth-child(3)::after {
+      content: "р";
+    }
+
+    &:nth-child(4)::after {
+      content: "т";
+    }
+
+    &:nth-child(5)::after {
+      content: "т";
+    }
+
+    &:nth-child(6)::after {
+      content: "б";
+    }
+
+    &:nth-child(7)::after {
+      content: "с";
+    }
+  }
+
+  .calendar__item-text {
+    display: none;
+  }
+
+  .calendar__item-1st-of-month {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calendar {
+    width: 999px;
+    margin-bottom: 53px;
+
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.8px;
+  }
+
+  .calendar__item {
+    width: 141px;
+    height: 72px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .calendar__days-of-week .calendar__item {
+    height: 48px;
+    padding-top: 13px;
+
+    &:first-child::after {
+      content: "н";
+    }
+
+    &:nth-child(2)::after {
+      content: "т";
+    }
+
+    &:nth-child(3)::after {
+      content: "р";
+    }
+
+    &:nth-child(4)::after {
+      content: "т";
+    }
+
+    &:nth-child(5)::after {
+      content: "т";
+    }
+
+    &:nth-child(6)::after {
+      content: "б";
+    }
+
+    &:nth-child(7)::after {
+      content: "с";
+    }
+  }
+
+  .calendar__item-text {
+    display: block;
   }
 }

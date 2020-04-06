@@ -1,6 +1,9 @@
-@padding-top-mobile: 51px;
-@padding-bottom-mobile: 35px;
-
+@map-padding-top-mobile: 51px;
+@map-padding-bottom-mobile: 35px;
+@map-padding-top-tablet: 110px;
+@map-padding-bottom-tablet: 85px;
+@map-padding-top-desktop: 117px;
+@map-padding-bottom-desktop: 34px;
 
 .map__contacts {
   position: relative;
@@ -14,8 +17,8 @@
 
 .map__inner {
   align-items: flex-start;
-  padding-top: @padding-top-mobile;
-  padding-bottom: @padding-bottom-mobile;
+  padding-top: @map-padding-top-mobile;
+  padding-bottom: @map-padding-bottom-mobile;
 }
 
 .map__address {
@@ -80,4 +83,97 @@
   height: 332px;
 
   border: 0;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .map__contacts {
+    margin-bottom: -@radius-5;
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .map__inner {
+    padding-top: @map-padding-top-tablet;
+    padding-bottom: @map-padding-bottom-tablet;
+  }
+
+  .map__address {
+    width: auto;
+    margin-left: 36px;
+    margin-bottom: 42px;
+
+    &::after {
+      background-size: 21px 31px;
+    }
+
+    &::before,
+    &::after {
+      margin-top: 0;
+    }
+  }
+
+  .map__route-button {
+    width: 618px;
+    height: 81px;
+    margin-left: 36px;
+    padding-left: 34px;
+  }
+
+  .map__image {
+    height: 581px;
+
+    background-image: url("../img/map-tablet@1x.jpg");
+  }
+
+  .map__iframe {
+    position: absolute;
+
+    height: 581px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__contacts {
+    margin-bottom: -@radius-5;
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .map__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: @map-padding-top-desktop;
+    padding-bottom: @map-padding-bottom-desktop;
+  }
+
+  .map__address {
+    width: auto;
+    margin-left: 224px;
+
+    &::before,
+    &::after {
+      margin-top: 0;
+    }
+  }
+
+  .map__route-button {
+    width: 324px;
+    height: 81px;
+    margin-top: -23px;
+    margin-right: 75px;
+    padding-left: 35px;
+  }
+
+  .map__image {
+    height: 516px;
+
+    background-image: url("../img/map-desktop@1x.jpg");
+  }
+
+  .map__iframe {
+    position: absolute;
+
+    height: 516px;
+  }
 }

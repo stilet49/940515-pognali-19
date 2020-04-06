@@ -26,3 +26,58 @@
 .form-main__add-plan {
   margin-top: -@radius-4;
 }
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
+  .form-main__title-wrapper {
+    margin-bottom: -@radius-5;
+
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .form-main__title-inner {
+    padding-top: 54px;
+    padding-right: 74px;
+    padding-left: 74px;
+  }
+
+  .form-main__user-info {
+    padding-top: @radius-5;
+  }
+
+  .form-main__user-plans {
+    margin-top: -@radius-4;
+  }
+
+  .form-main__add-plan {
+    margin-top: -@radius-4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-main__title-wrapper {
+    margin-bottom: -@radius-5;
+
+    border-bottom-right-radius: @radius-5;
+    border-bottom-left-radius: @radius-5;
+  }
+
+  .form-main__title-inner {
+    //min-height: 243px;
+    padding-top: 108px;
+    padding-right: 124px;
+    padding-left: 124px;
+  }
+
+  .form-main__user-info {
+    padding-top: 0;
+  }
+
+  .form-main__user-plans {
+    margin-top: -@radius-5;
+  }
+
+  .form-main__add-plan {
+    margin-top: -@radius-5;
+  }
+}
