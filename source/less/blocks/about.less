@@ -23,6 +23,10 @@
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 292px auto;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/about-mobile@2x.png");
+  }
 }
 
 .about__title {
@@ -61,6 +65,10 @@
     background-repeat: no-repeat;
     background-position: right 8px top 48px;
     background-size: 376px auto;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/about-tablet@2x.png");
+    }
 
     &::before {
       content: "";
@@ -124,6 +132,10 @@
     background-repeat: no-repeat;
     background-position: right @desktop-padding bottom 0;
     background-size: 630px auto;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/about-desktop@2x.png");
+    }
 
     &::before {
       content: "";
