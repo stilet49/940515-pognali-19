@@ -6,6 +6,12 @@
   padding-bottom: 28px;
   background-color: #ffffff;
 
+  &--no-js {
+    .menu__close-button {
+      display: none;
+    }
+  }
+
   &--closed {
     background-color: @blue-1;
 
@@ -118,6 +124,10 @@
   flex-direction: column;
   margin-right: auto;
   margin-bottom: 30px;
+}
+
+.menu__contacts-desktop {
+  display: none;
 }
 
 .menu__socials {
