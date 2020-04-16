@@ -14,7 +14,7 @@
   <body>
 
     <header class="header">
-      <nav class="header__menu menu menu--opened">
+      <nav class="header__menu menu menu--opened menu--no-js">
         <div class="menu__inner inner">
           <!-- Логотип белый -->
           <a class="menu__logo menu__logo--white logo" href="index.html">
@@ -167,8 +167,11 @@
               <span class="user-level__text user-level__text--form">level</span>
             </p>
 
-            <img class="user-info__photo" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@1x.jpg 2x" width="100" height="100" alt="Фото мужчины с бородой в шапке и темных очках">
-
+            <picture class="user-info__picture">
+              <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+              <img class="user-info__photo" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@1x.jpg 2x" width="100" height="100" alt="Фото мужчины с бородой в шапке и темных очках">
+            </picture>
 
             <a class="user-info__change-photo-button button-one button-one--bgc" href="#"><span class="user-info__button-text">Сменить</span>&nbsp;фото</a>
 
@@ -746,10 +749,10 @@
                 <textarea class="step__country-plan" name="country-two-plan" id="czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </div>
 
-            <div class="step__button-wrapper">
-              <button class="step__button button-two step__button--forward">Отправить</button>
-              <a class="step__button step__button--back-step-two step__button--back button-two button-two--back" href="#step-two">На шаг назад</a>
-            </div>
+              <div class="step__button-wrapper">
+                <button class="step__button button-two step__button--forward">Отправить</button>
+                <a class="step__button step__button--back-step-two step__button--back button-two button-two--back" href="#step-two">На шаг назад</a>
+              </div>
             </section>
           </div>
         </section>
