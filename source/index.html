@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.min.css" >
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.js" async></script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div class="sprite sprite--hide">
@@ -131,8 +135,7 @@
             <p class="review__text index-text">«Лучшее приложение, что я видел в жизни!»</p>
             <cite class="review__author index-text index-text--bold">
               Мурат Эльтазин
-              <br>
-              главный редактор газеты «гаджетлайф»
+              главный&nbsp;редактор газеты «гаджетлайф»
             </cite>
           </blockquote>
           <!--список чего-то-->
@@ -389,7 +392,7 @@
 
           <p class="cta-form__title index-title">Заинтересовались?</p>
 
-          <p class="cta-form__text index-text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="cta-form__login-link" href="user-login.html">авторизуйтесь</a>.</p>
+          <p class="cta-form__text index-text">Зарегистрируйтесь, это&nbsp;быстро&nbsp;и бесплатно! Уже&nbsp;зарегистрированы? Тогда скорее <a class="cta-form__login-link" href="user-login.html">авторизуйтесь</a>.</p>
 
           <form class="cta-form__login-form" action="https://echo.htmlacademy.ru" method="POST">
             <label aria-label="Поле ввода электронной почты">
@@ -484,5 +487,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>

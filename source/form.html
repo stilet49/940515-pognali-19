@@ -4,12 +4,16 @@
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/style.min.css" >
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.js" async></script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div class="sprite sprite--hide">
@@ -226,7 +230,7 @@
                 <li class="controls-list__item">Развлечения</li>
               </ul>
 
-              <p class="step__text">Укажите предпочтительное количество попутчиков, которых<br>вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в поездку и ее предполагаемую длительность.</p>
 
               <div class="step__control-field control-field">
                 <label class="control-field__label control-field__label--travelmates" for="travelmates-number">Ищу попутчиков:</label>
@@ -257,19 +261,24 @@
                   Можно с детьми</label>
               </div>
 
-              <div class="control-field__inner">
-                <button class="control-field__button control-field__button--back" type="button" aria-label="Minus">
-                  <svg class="control-field__button-icon" width="9" height="18">
-                    <use xlink:href="#icon-month-arrow-left"></use>
-                  </svg>
-                </button>
-                <input class="control-field__input control-field__input--date" type="text" name="date" value="Март 2019" id="date">
-                <button class="control-field__button control-field__button--forward" type="button" aria-label="Plus">
-                  <svg class="control-field__button-icon" width="9" height="18">
-                    <use xlink:href="#icon-month-arrow-right"></use>
-                  </svg>
-                </button>
+              <div class="step__control-field control-field">
+                <label class="control-field__label control-field__label--date" for="date" aria-label="Выбрать месяц и год поездки"></label>
+
+                <div class="control-field__inner">
+                  <button class="control-field__button control-field__button--back" type="button" aria-label="Minus">
+                    <svg class="control-field__button-icon" width="9" height="18">
+                      <use xlink:href="#icon-month-arrow-left"></use>
+                    </svg>
+                  </button>
+                  <input class="control-field__input control-field__input--date" type="text" name="date" value="Март 2019" id="date">
+                  <button class="control-field__button control-field__button--forward" type="button" aria-label="Plus">
+                    <svg class="control-field__button-icon" width="9" height="18">
+                      <use xlink:href="#icon-month-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
+
 
               <table class="step__calendar calendar">
                 <thead>
@@ -354,7 +363,7 @@
                 <li class="controls-list__item">Развлечения</li>
               </ul>
 
-              <p class="step__text step__text--step-two">Укажите страны, которые вы хотели посетить.&nbsp;<br class="step__text--break">Это может быть одна или сразу несколько.</p>
+              <p class="step__text step__text--step-two">Укажите страны, которые вы хотели посетить. Это&nbsp;может&nbsp;быть&nbsp;одна или сразу несколько.</p>
 
               <div class="step__select-wrapper">
                 <div class="step__select" tabindex="0">Босния и герцеговина</div>
@@ -737,7 +746,7 @@
                 <li class="controls-list__item">Развлечения</li>
               </ul>
 
-              <p class="step__text step__text--step-three">Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.</p>
+              <p class="step__text step__text--step-three">Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать&nbsp;в свободной форме и ставить тэги.</p>
 
               <div class="step__country-plan-wrapper step__country-plan-wrapper--error step__country-plan-wrapper--bosnia">
                 <label class="step__country step__country--bosnia step__country--empty" for="bosnia">Босния и герцеговина</label>
@@ -807,5 +816,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.min.js"></script>
   </body>
 </html>
